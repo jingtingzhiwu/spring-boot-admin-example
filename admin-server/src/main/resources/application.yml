@@ -1,0 +1,26 @@
+server:
+  port: 8500
+      
+###################
+# 邮件通知配置
+##################
+spring:
+   mail:
+      host: smtp.exmail.qq.com
+      username: ???
+      password: ???
+      properties:
+        mail.smtp.auth: true
+        mail.smtp.port: 465
+        mail.smtp.ssl.enable: true
+        mail.smtp.ssl.socketFactory: sf
+        mail.smtp.starttls.enable: true
+        mail.smtp.starttls.required: true
+   boot:
+     admin:
+        context-path: monitor
+        notify:
+          mail:
+            from: jsjl@szqijiang.com
+            to: ???
+            enabled: true

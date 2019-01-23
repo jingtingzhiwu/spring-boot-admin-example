@@ -1,0 +1,29 @@
+server:
+  port: 8501
+  servlet:
+    context-path: /clent1
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8500/monitor
+        username: root
+        password: root
+        instance:
+          service-base-url: http://localhost:8501
+          name: clent1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  version: @project.version@
+  name: @project.artifactId@
+  author: wilkey
+  mail: admin@wilkey.vip
